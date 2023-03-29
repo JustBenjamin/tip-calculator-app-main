@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="author" content="Benjamin Hove">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css" >
@@ -24,13 +24,13 @@
   <div class="calculator">
     <h4>Bill</h4>
     <form id="billForm">
+      <img src="./images/icon-dollar.svg" alt="dollar sign"/>
       <input type="number" id="bill" name="bill" />
-      
     </form>
     
 
     <h4>Select Tip %</h4>
-    <div class="tips">
+    <div class="tips" id="tips">
       <div class="five" id="five"  onclick="percentageRate(5)">
         5%
       </div>
@@ -57,6 +57,7 @@
 
     <h4>Number of People</h4>
     <form id="peopleForm">
+      <img src="./images/icon-person.svg" alt="person icon"/>
       <input type="number" name="people" id="people" />
     </form>
     

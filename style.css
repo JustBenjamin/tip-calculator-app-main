@@ -56,6 +56,7 @@ input {
     text-align:right;
     color: var(--Verydarkcyan);
     font-weight: 700;
+    position: relative;
 
 }
 
@@ -69,13 +70,21 @@ input::placeholder {
 
 }
 
+form > img {
+    margin: 12px;
+    position: absolute;
+    z-index: 2;
+  
+}
+
 .tips {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .tips > div {
-    margin: 0.2em;
+    margin: 0.2em 0;
 }
 
 .five,
@@ -87,8 +96,19 @@ input::placeholder {
     border-radius: 5px;
     padding: 0.4em 0.5em;
     color: var(--White);
-    width: 40%;
+    width: 44%;
     text-align: center;
+    cursor: pointer;
+}
+
+.custom {
+    background-color: var(--Verylightgrayishcyan);
+    color: var(--Grayishcyan);
+    border-radius: 5px;
+    padding: 0.4em 0.5em;
+    width: 44%;
+    text-align: center;
+    cursor: pointer;
 }
 
 .tips > div:active {
@@ -99,14 +119,7 @@ input::placeholder {
     background-color: var(--Strongcyan);
 }
 
-.custom {
-    background-color: var(--Verylightgrayishcyan);
-    color: var(--Grayishcyan);
-    border-radius: 5px;
-    padding: 0.4em 0.5em;
-    width: 40%;
-    text-align: center;
-}
+
 
 
 .output {
@@ -141,8 +154,6 @@ input::placeholder {
 }
 
 
-
-
 .reset {
     background-color: var(--Strongcyan);
     color:  var(--Verydarkcyan);
@@ -151,5 +162,28 @@ input::placeholder {
     border-radius: 5px;
     padding: 0.5em 0;
     margin: 0.8em 0 0 0;
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        justify-content: center;
+    }
+
+    main  {
+        flex-direction: row;
+        width: 50vw;
+        border-radius: 25px;
+        justify-content: space-evenly;
+
+    }
+
+    .calculator {
+        width: 40%;
+    }
+
+    .output {
+        width: 40%;
+    }
 }
 

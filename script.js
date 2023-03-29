@@ -4,16 +4,6 @@ const reset = document.getElementById("reset")
 const tip = document.getElementById("tip")
 const total = document.getElementById("total")
 
-// tip percentages
-const five = document.getElementById("five")
-
-
-// bill input listener
-// bill.addEventListener("input", function(){
-//     tip.innerHTML = "$" + bill.value
-   
-// })
-
 
 
 // percentage variable
@@ -71,27 +61,10 @@ function percentageRate(rate) {
 
 }
 
-// percentage listener
-   
 
-
-
-// five.addEventListener("click", function() {
-//     let tipPercentage = 0.05;
-//     let percentageAmount = parseInt(bill.value) * tipPercentage;
-//     let tipAmount = percentageAmount / parseInt(people.value)
-//     if (people.value == NaN || people.value == "" ) {
-//         tip.innerHTML = "$0";
-//     } else {
-//         tip.innerHTML = "$" + tipAmount.toFixed(2);;
-//     }
-// })
 
 reset.addEventListener("click", function() {
-    document.getElementById("billForm").reset()
-    document.getElementById("peopleForm").reset()
-    tip.innerHTML = "$0.00";
-    total.innerHTML = "$0.00";
+    window.location.reload()
 })
 
 
