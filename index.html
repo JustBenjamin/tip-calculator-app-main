@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Benjamin Hove">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css" >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+  
+  <title>Tip calculator app</title>
+
+ 
+</head>
+<body>
+<h1>SPLI<br>TTER</h1>
+<main>
+  <div class="calculator">
+    <h4>Bill</h4>
+    <form id="billForm">
+      <input type="number" id="bill" name="bill" />
+      
+    </form>
+    
+
+    <h4>Select Tip %</h4>
+    <div class="tips">
+      <div class="five" id="five"  onclick="percentageRate(5)">
+        5%
+      </div>
+
+      <div class="ten" id="ten"  onclick="percentageRate(10)">
+        10%
+      </div>
+
+      <div class="fifteen" id="fifteen" onclick="percentageRate(15)">
+        15%
+      </div>
+      <div class="twentyfive" id="twentyfive"  onclick="percentageRate(25)">
+        25%
+      </div>
+
+      <div class="fifty" id="fifty"  onclick="percentageRate(50)">
+        50%
+      </div>
+
+      <div class="custom" id="custom" onclick="percentageRate(100)">
+        Custom
+      </div>
+    </div>
+
+    <h4>Number of People</h4>
+    <form id="peopleForm">
+      <input type="number" name="people" id="people" />
+    </form>
+    
+  </div>
+
+
+<div class="output">
+  <div class="tipInfo">
+
+    <!-- tip amount -->
+    <div>
+      <h4>Tip Amount<br><span>/ person</span></h4>
+      <div class="tip" id="tip">$0.00</div>
+    </div>
+
+    <!-- tip total -->
+    <div>
+      <h4>Total<br><span>/ person</span></h4>
+     <div class="total" id="total">$0.00</div>
+    </div>
+  </div>
+  
+    <div class="reset" id="reset">RESET</div>
+</div>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
