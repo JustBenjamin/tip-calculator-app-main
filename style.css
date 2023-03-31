@@ -83,39 +83,44 @@ form > img {
     justify-content: space-between;
 }
 
-.tips > div {
+.tips > input[type="radio"] {
     margin: 0.2em 0;
 }
 
-.five,
-.ten,
-.fifteen,
-.twentyfive,
-.fifty {
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
     background-color: var(--Verydarkcyan);
+    border: none;
     border-radius: 5px;
     padding: 0.4em 0.5em;
     color: var(--White);
     width: 44%;
     text-align: center;
     cursor: pointer;
+    margin: 0.2em 0;
 }
 
-.custom {
-    background-color: var(--Verylightgrayishcyan);
-    color: var(--Grayishcyan);
-    border-radius: 5px;
-    padding: 0.4em 0.5em;
+.tips > input[type="number"] {
     width: 44%;
-    text-align: center;
-    cursor: pointer;
+    margin: 0.2em 0;
 }
 
-.tips > div:active {
+
+
+
+input[type="radio"] + label:active {
     background-color: var(--Strongcyan);
 }
 
-.tips > div:focus {
+input[type="radio"] + label:focus {
+    background-color: var(--Strongcyan);
+}
+
+input[type="radio"] + label:hover {
     background-color: var(--Strongcyan);
 }
 
