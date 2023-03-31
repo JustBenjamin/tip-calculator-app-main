@@ -83,16 +83,15 @@ form > img {
     justify-content: space-between;
 }
 
-.tips > input[type="radio"] {
+.tips > button {
     margin: 0.2em 0;
 }
 
-
-input[type="radio"] {
-    display: none;
-}
-
-input[type="radio"] + label {
+.five,
+.ten,
+.fifteen,
+.twentyfive,
+.fifty {
     background-color: var(--Verydarkcyan);
     border: none;
     border-radius: 5px;
@@ -101,26 +100,28 @@ input[type="radio"] + label {
     width: 44%;
     text-align: center;
     cursor: pointer;
-    margin: 0.2em 0;
 }
 
-.tips > input[type="number"] {
+.custom {
+    background-color: var(--Verylightgrayishcyan);
+    color: var(--Grayishcyan);
+    border: none;
+    border-radius: 5px;
+    padding: 0.4em 0.5em;
     width: 44%;
-    margin: 0.2em 0;
+    text-align: center;
+    cursor: pointer;
 }
 
-
-
-
-input[type="radio"] + label:active {
+.tips > button:active {
     background-color: var(--Strongcyan);
 }
 
-input[type="radio"] + label:focus {
+.tips > button:focus {
     background-color: var(--Strongcyan);
 }
 
-input[type="radio"] + label:hover {
+button:hover {
     background-color: var(--Strongcyan);
 }
 
