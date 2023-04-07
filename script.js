@@ -1,4 +1,5 @@
 const bill = document.getElementById("bill")
+const custom = document.getElementById("custom")
 const people = document.getElementById("people")
 const reset = document.getElementById("reset")
 const tip = document.getElementById("tip")
@@ -63,26 +64,37 @@ function percentageRate(rate) {
             break;
     
     }
+  
 
-
-    // tip amount / person
-    let percentageAmount = parseInt(bill.value) * tipPercentage;
-    let tipAmount = percentageAmount / parseInt(people.value)
-
-
-    // total amount / person
-    let totalPerPersonBeforeTip = parseInt(bill.value) / parseInt(people.value)
-    let totalPerPersonAfterTip = totalPerPersonBeforeTip + tipAmount
-
-    if (people.value == NaN || people.value == "" ) {
-        tip.innerHTML = "$0.00";
-        total.innerHTML = "$0.00";
-    } else {
-        tip.innerHTML = "$" + tipAmount.toFixed(2);
-        total.innerHTML = "$" + totalPerPersonAfterTip.toFixed(2);
-    }
+    totalAmountperPerson()
 
 }
+
+
+
+
+    //custom tip
+    custom.addEventListener("keyup", function() {
+
+        let tipPercentage = parseInt(custom.value)/100;
+        let percentageAmount = parseInt(bill.value) * tipPercentage;
+        let tipAmount = percentageAmount / parseInt(people.value)
+        
+        
+        // total amount / person
+        let totalPerPersonBeforeTip = parseInt(bill.value) / parseInt(people.value)
+        let totalPerPersonAfterTip = totalPerPersonBeforeTip + tipAmount
+          
+          if (people.value == NaN || people.value == "" ) {
+              tip.innerHTML = "$0.00";
+              total.innerHTML = "$0.00";
+          } else {
+              tip.innerHTML = "$" + tipAmount.toFixed(2);
+              total.innerHTML = "$" + totalPerPersonAfterTip.toFixed(2);
+          }
+    
+
+    })
 
 
 
@@ -96,5 +108,23 @@ reset.addEventListener("click", function() {
 
 
 
+function totalAmountperPerson() {
+   
+// tip amount / person
+let percentageAmount = parseInt(bill.value) * tipPercentage;
+let tipAmount = percentageAmount / parseInt(people.value)
 
 
+// total amount / person
+let totalPerPersonBeforeTip = parseInt(bill.value) / parseInt(people.value)
+let totalPerPersonAfterTip = totalPerPersonBeforeTip + tipAmount
+  
+  if (people.value == NaN || people.value == "" ) {
+      tip.innerHTML = "$0.00";
+      total.innerHTML = "$0.00";
+  } else {
+      tip.innerHTML = "$" + tipAmount.toFixed(2);
+      total.innerHTML = "$" + totalPerPersonAfterTip.toFixed(2);
+  }
+    
+}

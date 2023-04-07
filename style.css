@@ -47,7 +47,7 @@ h4 {
     margin: 0.8em 0;
 }
 
-input {
+input[type="number"] {
     font-size: 24px;
     border: none;
     background-color: var(--Verylightgrayishcyan);
@@ -60,6 +60,20 @@ input {
 
 }
 
+input[type="text"] {
+    font-size: 16px;
+    background-color: var(--Verylightgrayishcyan);
+    color: var(--Grayishcyan);
+    border: none;
+    border-radius: 5px;
+    padding: 0.4em 0.5em;
+    width: 40%;
+    max-height: 28px;
+    text-align: right;
+    cursor: pointer;
+    margin: 0.2em 0;
+}
+
 input:focus{
     outline: none;
 }
@@ -67,6 +81,7 @@ input:focus{
 input::placeholder {
     font-size: 16px;
     color: var(--Grayishcyan);
+
 
 }
 
@@ -100,18 +115,10 @@ form > img {
     width: 44%;
     text-align: center;
     cursor: pointer;
+    max-height: 28px;
 }
 
-.custom {
-    background-color: var(--Verylightgrayishcyan);
-    color: var(--Grayishcyan);
-    border: none;
-    border-radius: 5px;
-    padding: 0.4em 0.5em;
-    width: 44%;
-    text-align: center;
-    cursor: pointer;
-}
+
 
 .tips > button:active {
     background-color: var(--Strongcyan);
