@@ -4,6 +4,7 @@ const people = document.getElementById("people")
 const reset = document.getElementById("reset")
 const tip = document.getElementById("tip")
 const total = document.getElementById("total")
+const btn = document.getElementsByTagName("button");
 
 
 
@@ -14,60 +15,33 @@ let tipPercentage = 0;
 // percentage rate function
 function percentageRate(rate) {
     
+    btn.onclick = function() {
+        btn.style.backgroundColor = "var(--Strongcyan)";
+
+    }    
+
     switch(rate) {
         case 5:
-            tipPercentage = 0.05
-            document.getElementById("five").style.backgroundColor = "var(--Strongcyan)";
-            document.getElementById("ten").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("fifteen").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("twentyfive").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("fifty").style.backgroundColor = "var(--Verydarkcyan)";
-            
-    
+            tipPercentage = 0.05 
             break;
         case 10:
             tipPercentage = 0.10
-            document.getElementById("ten").style.backgroundColor = "var(--Strongcyan)";
-            document.getElementById("five").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("fifteen").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("twentyfive").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("fifty").style.backgroundColor = "var(--Verydarkcyan)";
             break;
         case 15:
             tipPercentage = 0.15
-            document.getElementById("fifteen").style.backgroundColor = "var(--Strongcyan)";
-            document.getElementById("five").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("ten").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("twentyfive").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("fifty").style.backgroundColor = "var(--Verydarkcyan)";
             break;
         case 25:
             tipPercentage = 0.25 
-            document.getElementById("twentyfive").style.backgroundColor = "var(--Strongcyan)";
-            document.getElementById("five").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("fifteen").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("ten").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("fifty").style.backgroundColor = "var(--Verydarkcyan)";
             break;
         case 50:
             tipPercentage = 0.50
-            document.getElementById("fifty").style.backgroundColor = "var(--Strongcyan)";
-            document.getElementById("five").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("fifteen").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("twentyfive").style.backgroundColor = "var(--Verydarkcyan)";
-            document.getElementById("ten").style.backgroundColor = "var(--Verydarkcyan)";
             break;
-        case 100:
-            tipPercentage = 0.50
-            document.getElementById("custom").style.backgroundColor = "var(--Strongcyan)";
-            document.getElementById("custom").style.color = "var(--White)";
-            break;
-    
+      
     }
   
-
+ 
     totalAmountperPerson()
-
+   
 }
 
 
@@ -94,6 +68,26 @@ function percentageRate(rate) {
           }
     
 
+    })
+
+
+
+// tip amounts when bill filled
+ bill.addEventListener("keyup", function() {
+        totalAmountperPerson()
+        btn.active = function() {
+            btn.style.backgroundColor = "var(--Strongcyan)";
+    
+        }  
+    })   
+
+// tip amounts when people filled
+people.addEventListener("keyup", function() {
+        totalAmountperPerson()
+        btn.active = function() {
+            btn.style.backgroundColor = "var(--Strongcyan)";
+    
+        }  
     })
 
 
