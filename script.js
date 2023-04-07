@@ -83,11 +83,21 @@ function percentageRate(rate) {
 
 // tip amounts when people filled
 people.addEventListener("keyup", function() {
-        totalAmountperPerson()
-        btn.active = function() {
-            btn.style.backgroundColor = "var(--Strongcyan)";
+    if (people.value == 0) {
+        document.getElementById("error").innerHTML = "Can't be zero"
+        people.style.borderColor = "#ff6347";
     
-        }  
+      } 
+      
+      else {
+        document.getElementById("error").innerHTML = " "
+        people.style.borderColor = "var(--Strongcyan)";
+        
+      }
+    
+    
+        totalAmountperPerson()
+
     })
 
 
@@ -103,6 +113,7 @@ reset.addEventListener("click", function() {
 
 
 function totalAmountperPerson() {
+
    
 // tip amount / person
 let percentageAmount = parseInt(bill.value) * tipPercentage;
@@ -113,12 +124,16 @@ let tipAmount = percentageAmount / parseInt(people.value)
 let totalPerPersonBeforeTip = parseInt(bill.value) / parseInt(people.value)
 let totalPerPersonAfterTip = totalPerPersonBeforeTip + tipAmount
   
-  if (people.value == NaN || people.value == "" ) {
+  if (people.value == NaN || people.value == ""  ) {
       tip.innerHTML = "$0.00";
       total.innerHTML = "$0.00";
+     
   } else {
       tip.innerHTML = "$" + tipAmount.toFixed(2);
       total.innerHTML = "$" + totalPerPersonAfterTip.toFixed(2);
+    
   }
+
+  
     
 }

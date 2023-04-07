@@ -76,6 +76,8 @@ input[type="text"] {
 
 input:focus{
     outline: none;
+    border: 2px solid var(--Strongcyan);
+    border-radius: 5px;
 }
 
 input::placeholder {
@@ -132,8 +134,16 @@ button:hover {
     background-color: var(--Strongcyan);
 }
 
+.peopleText {
+    display: flex;
+    justify-content: space-between;
+}
 
-
+#error {
+    color: #ff6347;
+    text-align: right;
+    padding-right: 25px;
+}
 
 .output {
     background-color: var(--Verydarkcyan);
