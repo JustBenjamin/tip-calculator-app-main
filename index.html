@@ -22,14 +22,15 @@
 <h1>SPLI<br>TTER</h1>
 <main>
   <div class="calculator">
-    <h4>Bill</h4>
+   
     <form id="billForm">
-      <img src="./images/icon-dollar.svg" alt="dollar sign"/>
+      <label>Bill</label>
       <input type="number" id="bill" name="bill" />
+      <img src="./images/icon-dollar.svg" alt="dollar sign"/>
     </form>
     
 
-    <h4>Select Tip %</h4>
+    <label>Select Tip %</label>
     <div class="tips" id="tips">
       <button class="five" id="five"  onclick="percentageRate(5)">
         5%
@@ -55,14 +56,15 @@
       </div>
     
 
-     <div class="peopleText">
-        <h4>Number of People</h4>
-        <p id="error"></p>
-      </div>
+     
    
     <form id="peopleForm">
-      <img src="./images/icon-person.svg" alt="person icon"/>
+      <div class="peopleText">
+        <label>Number of People</label>
+        <p id="error"></p>
+      </div>
       <input type="number" name="people" id="people" validate />
+      <img src="./images/icon-person.svg" alt="person icon"/>
     </form>
     
   </div>
